@@ -1,0 +1,4 @@
+.env
+iot-authentication/*
+node_modules/
+dist/
