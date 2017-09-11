@@ -30,48 +30,6 @@ declare class wemo_client {
 }
 
 declare namespace wemo_client {
-    namespace prototype {
-        function client(device: any): any;
-
-        function discover(cb: any): void;
-
-        function getCallbackURL(): any;
-
-        function getLocalInterfaceAddress(): any;
-
-        function load(setupUrl: any, cb: any): void;
-
-        namespace client {
-            const prototype: {
-            };
-
-        }
-
-        namespace discover {
-            const prototype: {
-            };
-
-        }
-
-        namespace getCallbackURL {
-            const prototype: {
-            };
-
-        }
-
-        namespace getLocalInterfaceAddress {
-            const prototype: {
-            };
-
-        }
-
-        namespace load {
-            const prototype: {
-            };
-
-        }
-
-    }
-
+    
 }
 
