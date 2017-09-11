@@ -29,14 +29,18 @@ export class HueLightController implements LightControllerInterface {
     turnAllOff() {
         for(var item in this.configuration) {
             let lightNumber = this.configuration[item].number;
-            this.hue.light(lightNumber).off().then(console.log).catch(console.error); 
+            this.hue.light(lightNumber).off(); 
         }
     }
 
     turnAllOn() {
         for(var item in this.configuration) {
             let lightNumber = this.configuration[item].number;
-            this.hue.light(lightNumber).on().then(console.log).catch(console.error); 
+            let onFullBlast360NoScopeState = {
+                on: true,
+                bri: 255
+            };
+            this.hue.light(lightNumber).setState(onFullBlast360NoScopeState); 
         }
     }
 

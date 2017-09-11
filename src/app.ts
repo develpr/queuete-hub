@@ -9,7 +9,7 @@ dotenv.config();
 class App {
 
       readonly THING_NAME = "HomeLights";
-      readonly COMMAND_TOPIC = "/lightStateModification";
+      readonly COMMAND_TOPIC = "lightStateModification";
 
       thing: awsIoT.thingShadow;
       hueController: HueLightController;      
@@ -71,9 +71,19 @@ class App {
             }
             
             var power = false;
+
+            if( ! payload ) {
+                  return;
+            }
             
-            if(payload && payload.power && payload.power === true ) {
-                  power = true;
+            if(payload.power && payload.power === true ) {
+                  power = true;            
+            }
+            else if(payload.clickType && payload.clickType === 'SINGLE' ) {
+                  power = true;            
+            }
+            else if(payload.clickType && payload.clickType === 'DOUBLE' ) {
+                  power = false;            
             }
 
             this.setLightPower(power);            
@@ -91,15 +101,11 @@ class App {
       private setLightPower(power: boolean) {
             if(power) {
                   this.hueController.turnAllOn();
-                  this.wemoController.turnAllOn();
-                  this.hueController.turnAllOn();
-                  this.wemoController.turnAllOn();
+                  this.wemoController.turnAllOn();                  
             }
             else {
                   this.hueController.turnAllOff();
-                  this.wemoController.turnAllOff();
-                  this.hueController.turnAllOff();
-                  this.wemoController.turnAllOff();
+                  this.wemoController.turnAllOff();                  
             }
       }
 
@@ -107,59 +113,3 @@ class App {
 }
 
 const app = new App();
-
-
-/*
-
-
-thingShadows.on('close', function () {
-      console.log('close');
-      thingShadows.unregister(thingName);
-});
-
-thingShadows.on('reconnect', function () {
-      console.log('reconnect');
-});
-
-thingShadows.on('offline', function () {
-      //
-      // If any timeout is currently pending, cancel it.
-      //
-      if (currentTimeout !== null) {
-            clearTimeout(currentTimeout);
-            currentTimeout = null;
-      }
-
-      console.log('offline');
-});
-
-thingShadows.on('error', function (error: any) {
-      console.log('error', error);
-});
-
-thingShadows.on('message', function (topic: string, payload: object) {
-      console.log('message is...', topic, payload.toString());
-      genericOperation('update', generateRandomState());
-});
-
-thingShadows.on('status', function (thingName: string, stat: string, clientToken: string, stateObject: any) {
-      console.info("status");
-      console.info(thingName, stat, clientToken, stateObject);
-});
-
-
-thingShadows.on('delta', function (thingName: string, stateObject: any) {
-      console.log("delta");
-      console.log(JSON.stringify(stateObject));
-});
-
-thingShadows.on('timeout', function (thingName: string, clientToken: string) {
-      console.log("timeout!");
-});
-
-thingShadows.on('message', function (topic: string, payload: any) {
-      console.log(topic, payload);
-});
-
-*/
-
