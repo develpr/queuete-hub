@@ -14,9 +14,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/aws-iot-device-sdk": "^1.0.0",
-    "@types/dotenv": "^4.0.1",
+  "dependencies": {    
     "aws-iot-device-sdk": "^2.0.1",
     "belkin-wemo-command-line-tools": "^1.0.28",
     "concurrently": "^3.5.0",
@@ -28,6 +26,8 @@
     "wemo-client": "^0.14.0"
   },
   "devDependencies": {
+    "@types/aws-iot-device-sdk": "^1.0.0",
+    "@types/dotenv": "^4.0.1",
     "@types/node": "^8.0.26",
     "dts-gen": "^0.5.6",
     "typescript": "^2.5.2"
