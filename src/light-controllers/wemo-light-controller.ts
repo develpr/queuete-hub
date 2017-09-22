@@ -48,16 +48,14 @@ export class WemoLightController extends LightController<WemoConfigurationInterf
     }
 
     turnAllOff() {
-        for(var item in this.configuration) {
-            let deviceInfo = this.configuration[item].deviceInfo;
-            this.wemo.client(deviceInfo).setBinaryState(0);
+        for(let light of this.getLightConfigurations()) {
+            this.wemo.client(light.deviceInfo).setBinaryState(0);
         }
     }
 
     turnAllOn() {
-        for(var item in this.configuration) {
-            let deviceInfo = this.configuration[item].deviceInfo;
-            this.wemo.client(deviceInfo).setBinaryState(1);
+        for(let light of this.getLightConfigurations()) {
+            this.wemo.client(light.deviceInfo).setBinaryState(1);
         }
     }
 

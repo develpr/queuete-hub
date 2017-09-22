@@ -57,21 +57,24 @@ export class HueLightController extends LightController<HueConfigurationInterfac
     }
 
     turnAllOff() {
-        for(var item in this.configuration) {
-            let lightNumber = this.configuration[item].number;
-            this.hue.light(lightNumber).off(); 
+        for(let light of this.getLightConfigurations()) {
+            const offState = {
+                "on": false,
+                "transitiontime": 0
+            };
+            this.hue.light(light.number).setState(offState);
         }
     }
 
     turnAllOn() {
-        for(var item in this.configuration) {
-            let lightNumber = this.configuration[item].number;
-            let onFullBlast360NoScopeState = {
-                on: true,
-                bri: 255
+        for(let light of this.getLightConfigurations()) {
+            const onFullBlast360NoScopeState = {
+                "on": true,
+                "transitiontime": 0,
+                "bri": 255
             };
-            this.hue.light(lightNumber).setState(onFullBlast360NoScopeState); 
-        }
+            this.hue.light(light.number).setState(onFullBlast360NoScopeState);
+        }    
     }
 
 }
