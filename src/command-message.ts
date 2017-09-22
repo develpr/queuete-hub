@@ -39,7 +39,7 @@ export class CommandMessage implements CommandMessageInterface {
     }
 
     public powerOffIds(): string[] {
-        let off = this.command.on;
+        let off = this.command.off;
         if( ! off ) {
             return [];
         }

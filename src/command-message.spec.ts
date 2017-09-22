@@ -33,13 +33,21 @@ describe('CommandMessage tool', () => {
         assert.isArray(command.powerOnIds());
     });
 
-    it('give empty array if no on parameter is passed', () => {    
+
+    it('give a valid list of ids to turn off', () => {    
+        const command = new CommandMessage('{"off": ["light-1", "light-2", "light-3"]}');
+        expect(command.powerOffIds()).to.have.lengthOf(3);
+        assert.isArray(command.powerOnIds());
+    });
+
+
+    it('give empty array if no "on" parameter is passed', () => {    
         const command = new CommandMessage('{"power": true}');
         assert.isArray(command.powerOnIds());
         expect(command.powerOnIds()).to.have.lengthOf(0);        
     });
 
-    it('give empty array if no off parameter is passed', () => {    
+    it('give empty array if no "off" parameter is passed', () => {    
         const command = new CommandMessage('{"power": true}');
         assert.isArray(command.powerOffIds());
         expect(command.powerOffIds()).to.have.lengthOf(0);        

@@ -85,7 +85,7 @@ class App {
                         this.hueController.turnOn(id);
                         this.wemoController.turnOn(id); 
                   }
-                  for (let id of command.powerOffIds()) {
+                  for (let id of command.powerOffIds()) {                        
                         this.hueController.turnOff(id);
                         this.wemoController.turnOff(id); 
                   }
