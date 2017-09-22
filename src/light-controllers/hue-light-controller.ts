@@ -36,7 +36,11 @@ export class HueLightController extends LightController<HueConfigurationInterfac
         if( ! light ) {
             return;
         }
-        this.hue.light(light.number).off();
+        const offState = {
+            "on": false,
+            "transitionTime": 0
+        };
+        this.hue.light(light.number).setState();
     }
 
     turnOn(id: string) {
@@ -44,9 +48,10 @@ export class HueLightController extends LightController<HueConfigurationInterfac
         if( ! light ) {
             return;
         }
-        let onFullBlast360NoScopeState = {
-            on: true,
-            bri: 255
+        const onFullBlast360NoScopeState = {
+            "on": true,
+            "transitionTime": 0,
+            "bri": 255
         };
         this.hue.light(light.number).setState(onFullBlast360NoScopeState);
     }
