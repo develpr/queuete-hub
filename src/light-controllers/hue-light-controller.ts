@@ -1,14 +1,19 @@
 import dotenv = require("dotenv");
 dotenv.config();
 import * as Hue from 'philips-hue';
+import { HueConfigurationInterface } from '../models/hue-configuration.interface';
 import { LightControllerInterface } from './light-controller.interface';
+import { LightController } from './light-controller.abstract';
 
-export class HueLightController implements LightControllerInterface {
+export class HueLightController extends LightController<HueConfigurationInterface> implements LightControllerInterface {
 
     hue: any = null;
+    configuration: any = null;
 
-    constructor(private configuration: any) {
+    constructor(configuration: any) {
 
+        super(configuration);
+        
         this.hue = new Hue();
         this.hue.bridge = process.env.HUE_BRIDGE;
         this.hue.username = process.env.HUE_USERNAME;
@@ -24,6 +29,26 @@ export class HueLightController implements LightControllerInterface {
         //     });
         
         
+    }
+
+    turnOff(id: string) {
+        let light = this.findLightById(id);
+        if( ! light ) {
+            return;
+        }
+        this.hue.light(light.number).off();
+    }
+
+    turnOn(id: string) {
+        let light = this.findLightById(id);        
+        if( ! light ) {
+            return;
+        }
+        let onFullBlast360NoScopeState = {
+            on: true,
+            bri: 255
+        };
+        this.hue.light(light.number).setState(onFullBlast360NoScopeState);
     }
 
     turnAllOff() {

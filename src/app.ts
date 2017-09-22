@@ -2,6 +2,7 @@ import dotenv = require("dotenv");
 import awsIoT = require("aws-iot-device-sdk");
 import { HueLightController } from './light-controllers/hue-light-controller';
 import { WemoLightController } from './light-controllers/wemo-light-controller';
+import { CommandMessage } from './command-message';
 const lightsConfiguration = require("../lights-config.json");
 
 dotenv.config();
@@ -62,32 +63,33 @@ class App {
       }
 
       handleMessage(topic: string, payload: any) {        
-            
+            let command = null;
             try{
-                  payload = JSON.parse(payload);   
+                  command = new CommandMessage(payload);
+                  if( ! command ) {
+                        return;
+                  }
             } catch(e) {
-                  console.log("This is not a great json tbqh");
+                  console.log("This is not a great payload tbqh");
                   return;
             }
             
-            var power = false;
-
-            if( ! payload ) {
-                  return;
-            }
-            
-            if(payload.power && payload.power === true ) {
-                  power = true;            
-            }
-            else if(payload.clickType && payload.clickType === 'SINGLE' ) {
-                  power = true;            
-            }
-            else if(payload.clickType && payload.clickType === 'DOUBLE' ) {
-                  power = false;            
+            if(command.isPower()) {
+                  this.setLightPower(command.turnPowerOnCommand());
+                  this.updateThing({ "state": { "reported": { "power": command.turnPowerOnCommand() } } });
             }
 
-            this.setLightPower(power);            
-            this.updateThing({ "state": { "reported": { "power": power } } });
+            else {
+                  
+                  for (let id of command.powerOnIds()) {                        
+                        this.hueController.turnOn(id);
+                        this.wemoController.turnOn(id); 
+                  }
+                  for (let id of command.powerOffIds()) {
+                        this.hueController.turnOff(id);
+                        this.wemoController.turnOff(id); 
+                  }
+            }
       }
 
       handleConnect() {

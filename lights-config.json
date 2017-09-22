@@ -1,57 +1,75 @@
 {
-    "hue": {
-        "bedroom-1": {
+    "hue":[ {
+            "id": "bedroom-1",
             "name": "bedroom 1",
             "number": 1
         },
-        "bedroom-2": {
+        {
+            "id": "bedroom-2",
             "name": "bedroom 2",
             "number": 2
         },
-        "kitchen-1": {
+        {
+            "id": "kitchen-1",
             "name":"kitchen 1",
             "number": 3
         },
-        "office-1" : {
+        {
+            "id": "office-1",
             "name":"office 1",
             "number": 4
         },
-        "kitchen-3" : {
+        {
+            "id": "kitchen-3",
             "name":"kitchen 3",
             "number": 5
         },
-        "kitchen-2" : {
+        {
+            "id": "kitchen-2",
             "name":"kitchen 2",
             "number": 6
         },
-        "dining-room-1" : {
+        {
+            "id": "dining-room-1",
             "name":"dining room 1",
             "number": 7
         },
-        "dining-room-2" : {
+        {
+            "id": "dining-room-2",
             "name":"dining room 2",
             "number": 8
         },
-        "hallway-1" : {
+        {
+            "id": "hallway-1",
             "name":"hallway x1",
             "number": 9
         }
-    },
-    "wemo": {
-        "dining-room": {
+    ],
+    "wemo": [
+        {
+            "id": "dining-room",
             "deviceInfo": {"deviceType":"urn:Belkin:device:insight:1","friendlyName":"Dining room switch 1","manufacturer":"Belkin International Inc.","manufacturerURL":"http://www.belkin.com","modelDescription":"Belkin Insight 1.0","modelName":"Insight","modelNumber":"1.0","modelURL":"http://www.belkin.com/plugin/","serialNumber":"231511K12002BB","UDN":"uuid:Insight-1_0-231511K12002BB","UPC":"123456789","macAddress":"94103ECF2974","firmwareVersion":"WeMo_WW_2.00.10966.PVT-OWRT-InsightV2","iconVersion":"0|49153","binaryState":"0","iconList":{"icon":{"mimetype":"jpg","width":"100","height":"100","depth":"100","url":"icon.jpg"}},"serviceList":{"service":[{"serviceType":"urn:Belkin:service:WiFiSetup:1","serviceId":"urn:Belkin:serviceId:WiFiSetup1","controlURL":"/upnp/control/WiFiSetup1","eventSubURL":"/upnp/event/WiFiSetup1","SCPDURL":"/setupservice.xml"},{"serviceType":"urn:Belkin:service:timesync:1","serviceId":"urn:Belkin:serviceId:timesync1","controlURL":"/upnp/control/timesync1","eventSubURL":"/upnp/event/timesync1","SCPDURL":"/timesyncservice.xml"},{"serviceType":"urn:Belkin:service:basicevent:1","serviceId":"urn:Belkin:serviceId:basicevent1","controlURL":"/upnp/control/basicevent1","eventSubURL":"/upnp/event/basicevent1","SCPDURL":"/eventservice.xml"},{"serviceType":"urn:Belkin:service:firmwareupdate:1","serviceId":"urn:Belkin:serviceId:firmwareupdate1","controlURL":"/upnp/control/firmwareupdate1","eventSubURL":"/upnp/event/firmwareupdate1","SCPDURL":"/firmwareupdate.xml"},{"serviceType":"urn:Belkin:service:rules:1","serviceId":"urn:Belkin:serviceId:rules1","controlURL":"/upnp/control/rules1","eventSubURL":"/upnp/event/rules1","SCPDURL":"/rulesservice.xml"},{"serviceType":"urn:Belkin:service:metainfo:1","serviceId":"urn:Belkin:serviceId:metainfo1","controlURL":"/upnp/control/metainfo1","eventSubURL":"/upnp/event/metainfo1","SCPDURL":"/metainfoservice.xml"},{"serviceType":"urn:Belkin:service:remoteaccess:1","serviceId":"urn:Belkin:serviceId:remoteaccess1","controlURL":"/upnp/control/remoteaccess1","eventSubURL":"/upnp/event/remoteaccess1","SCPDURL":"/remoteaccess.xml"},{"serviceType":"urn:Belkin:service:deviceinfo:1","serviceId":"urn:Belkin:serviceId:deviceinfo1","controlURL":"/upnp/control/deviceinfo1","eventSubURL":"/upnp/event/deviceinfo1","SCPDURL":"/deviceinfoservice.xml"},{"serviceType":"urn:Belkin:service:insight:1","serviceId":"urn:Belkin:serviceId:insight1","controlURL":"/upnp/control/insight1","eventSubURL":"/upnp/event/insight1","SCPDURL":"/insightservice.xml"},{"serviceType":"urn:Belkin:service:smartsetup:1","serviceId":"urn:Belkin:serviceId:smartsetup1","controlURL":"/upnp/control/smartsetup1","eventSubURL":"/upnp/event/smartsetup1","SCPDURL":"/smartsetup.xml"},{"serviceType":"urn:Belkin:service:manufacture:1","serviceId":"urn:Belkin:serviceId:manufacture1","controlURL":"/upnp/control/manufacture1","eventSubURL":"/upnp/event/manufacture1","SCPDURL":"/manufacture.xml"}]},"presentationURL":"/pluginpres.html","host":"10.0.1.42","port":"49153","callbackURL":"http://10.0.1.32:61185"},
             "host": "10.0.1.43",
             "name": "dining room"
         },
-        "living-room": {
+        {
+            "id": "living-room",
             "deviceInfo": {"deviceType":"urn:Belkin:device:insight:1","friendlyName":"Living room 1","manufacturer":"Belkin International Inc.","manufacturerURL":"http://www.belkin.com","modelDescription":"Belkin Insight 1.0","modelName":"Insight","modelNumber":"1.0","modelURL":"http://www.belkin.com/plugin/","serialNumber":"221403K1200D75","UDN":"uuid:Insight-1_0-221403K1200D75","UPC":"123456789","macAddress":"B4750E746DF4","firmwareVersion":"WeMo_WW_2.00.10966.PVT-OWRT-Insight","iconVersion":"3|49153","binaryState":"0","iconList":{"icon":{"mimetype":"jpg","width":"100","height":"100","depth":"100","url":"icon.jpg"}},"serviceList":{"service":[{"serviceType":"urn:Belkin:service:WiFiSetup:1","serviceId":"urn:Belkin:serviceId:WiFiSetup1","controlURL":"/upnp/control/WiFiSetup1","eventSubURL":"/upnp/event/WiFiSetup1","SCPDURL":"/setupservice.xml"},{"serviceType":"urn:Belkin:service:timesync:1","serviceId":"urn:Belkin:serviceId:timesync1","controlURL":"/upnp/control/timesync1","eventSubURL":"/upnp/event/timesync1","SCPDURL":"/timesyncservice.xml"},{"serviceType":"urn:Belkin:service:basicevent:1","serviceId":"urn:Belkin:serviceId:basicevent1","controlURL":"/upnp/control/basicevent1","eventSubURL":"/upnp/event/basicevent1","SCPDURL":"/eventservice.xml"},{"serviceType":"urn:Belkin:service:firmwareupdate:1","serviceId":"urn:Belkin:serviceId:firmwareupdate1","controlURL":"/upnp/control/firmwareupdate1","eventSubURL":"/upnp/event/firmwareupdate1","SCPDURL":"/firmwareupdate.xml"},{"serviceType":"urn:Belkin:service:rules:1","serviceId":"urn:Belkin:serviceId:rules1","controlURL":"/upnp/control/rules1","eventSubURL":"/upnp/event/rules1","SCPDURL":"/rulesservice.xml"},{"serviceType":"urn:Belkin:service:metainfo:1","serviceId":"urn:Belkin:serviceId:metainfo1","controlURL":"/upnp/control/metainfo1","eventSubURL":"/upnp/event/metainfo1","SCPDURL":"/metainfoservice.xml"},{"serviceType":"urn:Belkin:service:remoteaccess:1","serviceId":"urn:Belkin:serviceId:remoteaccess1","controlURL":"/upnp/control/remoteaccess1","eventSubURL":"/upnp/event/remoteaccess1","SCPDURL":"/remoteaccess.xml"},{"serviceType":"urn:Belkin:service:deviceinfo:1","serviceId":"urn:Belkin:serviceId:deviceinfo1","controlURL":"/upnp/control/deviceinfo1","eventSubURL":"/upnp/event/deviceinfo1","SCPDURL":"/deviceinfoservice.xml"},{"serviceType":"urn:Belkin:service:insight:1","serviceId":"urn:Belkin:serviceId:insight1","controlURL":"/upnp/control/insight1","eventSubURL":"/upnp/event/insight1","SCPDURL":"/insightservice.xml"},{"serviceType":"urn:Belkin:service:smartsetup:1","serviceId":"urn:Belkin:serviceId:smartsetup1","controlURL":"/upnp/control/smartsetup1","eventSubURL":"/upnp/event/smartsetup1","SCPDURL":"/smartsetup.xml"},{"serviceType":"urn:Belkin:service:manufacture:1","serviceId":"urn:Belkin:serviceId:manufacture1","controlURL":"/upnp/control/manufacture1","eventSubURL":"/upnp/event/manufacture1","SCPDURL":"/manufacture.xml"}]},"presentationURL":"/pluginpres.html","host":"10.0.1.43","port":"49153","callbackURL":"http://10.0.1.32:61185"},
             "host": "10.0.1.42",
             "name": "living room"
         },
-        "porch": {
+        {
+            "id": "porch",
             "deviceInfo": {"deviceType":"urn:Belkin:device:controllee:1","friendlyName":"Porch 1","manufacturer":"Belkin International Inc.","manufacturerURL":"http://www.belkin.com","modelDescription":"Belkin Plugin Socket 1.0","modelName":"Socket","modelNumber":"1.0","modelURL":"http://www.belkin.com/plugin/","serialNumber":"221332K0101C83","UDN":"uuid:Socket-1_0-221332K0101C83","UPC":"123456789","macAddress":"EC1A59EC02C8","firmwareVersion":"WeMo_WW_2.00.10966.PVT-OWRT-SNS","iconVersion":"5|49153","binaryState":"0","iconList":{"icon":{"mimetype":"jpg","width":"100","height":"100","depth":"100","url":"icon.jpg"}},"serviceList":{"service":[{"serviceType":"urn:Belkin:service:WiFiSetup:1","serviceId":"urn:Belkin:serviceId:WiFiSetup1","controlURL":"/upnp/control/WiFiSetup1","eventSubURL":"/upnp/event/WiFiSetup1","SCPDURL":"/setupservice.xml"},{"serviceType":"urn:Belkin:service:timesync:1","serviceId":"urn:Belkin:serviceId:timesync1","controlURL":"/upnp/control/timesync1","eventSubURL":"/upnp/event/timesync1","SCPDURL":"/timesyncservice.xml"},{"serviceType":"urn:Belkin:service:basicevent:1","serviceId":"urn:Belkin:serviceId:basicevent1","controlURL":"/upnp/control/basicevent1","eventSubURL":"/upnp/event/basicevent1","SCPDURL":"/eventservice.xml"},{"serviceType":"urn:Belkin:service:firmwareupdate:1","serviceId":"urn:Belkin:serviceId:firmwareupdate1","controlURL":"/upnp/control/firmwareupdate1","eventSubURL":"/upnp/event/firmwareupdate1","SCPDURL":"/firmwareupdate.xml"},{"serviceType":"urn:Belkin:service:rules:1","serviceId":"urn:Belkin:serviceId:rules1","controlURL":"/upnp/control/rules1","eventSubURL":"/upnp/event/rules1","SCPDURL":"/rulesservice.xml"},{"serviceType":"urn:Belkin:service:metainfo:1","serviceId":"urn:Belkin:serviceId:metainfo1","controlURL":"/upnp/control/metainfo1","eventSubURL":"/upnp/event/metainfo1","SCPDURL":"/metainfoservice.xml"},{"serviceType":"urn:Belkin:service:remoteaccess:1","serviceId":"urn:Belkin:serviceId:remoteaccess1","controlURL":"/upnp/control/remoteaccess1","eventSubURL":"/upnp/event/remoteaccess1","SCPDURL":"/remoteaccess.xml"},{"serviceType":"urn:Belkin:service:deviceinfo:1","serviceId":"urn:Belkin:serviceId:deviceinfo1","controlURL":"/upnp/control/deviceinfo1","eventSubURL":"/upnp/event/deviceinfo1","SCPDURL":"/deviceinfoservice.xml"},{"serviceType":"urn:Belkin:service:smartsetup:1","serviceId":"urn:Belkin:serviceId:smartsetup1","controlURL":"/upnp/control/smartsetup1","eventSubURL":"/upnp/event/smartsetup1","SCPDURL":"/smartsetup.xml"},{"serviceType":"urn:Belkin:service:manufacture:1","serviceId":"urn:Belkin:serviceId:manufacture1","controlURL":"/upnp/control/manufacture1","eventSubURL":"/upnp/event/manufacture1","SCPDURL":"/manufacture.xml"}]},"presentationURL":"/pluginpres.html","host":"10.0.1.44","port":"49153","callbackURL":"http://10.0.1.32:61185"},
             "host": "10.0.1.44",
             "name": "porch"
         }
-    }
+    ],
+    "tpLink": [
+        {
+            "id": "bedroom-lamp-1",
+            "name": "bedroom lamp 1",
+            "host": "10.0.1.52"
+        }
+    ]
 }

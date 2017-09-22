@@ -1,0 +1,17 @@
+import { GenericLightConfigurationInterface } from './generic-light-configuration.interface';
+
+
+/**
+
+{
+    "id": "dining-room",
+    "host": "10.0.1.43",
+    "deviceInfo": {"deviceType":"urn:Belkin:device:insight:1","friendlyName":"Dining room switch 1","manufacturer":"Belkin International Inc.","manufacturerURL":"http://www.belkin.com","modelDescription":"Belkin Insight 1.0","modelName":"Insight","modelNumber":"1.0","modelURL":"http://www.belkin.com/plugin/","serialNumber":"231511K12002BB","UDN":"uuid:Insight-1_0-231511K12002BB","UPC":"123456789","macAddress":"94103ECF2974","firmwareVersion":"WeMo_WW_2.00.10966.PVT-OWRT-InsightV2","iconVersion":"0|49153","binaryState":"0","iconList":{"icon":{"mimetype":"jpg","width":"100","height":"100","depth":"100","url":"icon.jpg"}},"serviceList":{"service":[{"serviceType":"urn:Belkin:service:WiFiSetup:1","serviceId":"urn:Belkin:serviceId:WiFiSetup1","controlURL":"/upnp/control/WiFiSetup1","eventSubURL":"/upnp/event/WiFiSetup1","SCPDURL":"/setupservice.xml"},{"serviceType":"urn:Belkin:service:timesync:1","serviceId":"urn:Belkin:serviceId:timesync1","controlURL":"/upnp/control/timesync1","eventSubURL":"/upnp/event/timesync1","SCPDURL":"/timesyncservice.xml"},{"serviceType":"urn:Belkin:service:basicevent:1","serviceId":"urn:Belkin:serviceId:basicevent1","controlURL":"/upnp/control/basicevent1","eventSubURL":"/upnp/event/basicevent1","SCPDURL":"/eventservice.xml"},{"serviceType":"urn:Belkin:service:firmwareupdate:1","serviceId":"urn:Belkin:serviceId:firmwareupdate1","controlURL":"/upnp/control/firmwareupdate1","eventSubURL":"/upnp/event/firmwareupdate1","SCPDURL":"/firmwareupdate.xml"},{"serviceType":"urn:Belkin:service:rules:1","serviceId":"urn:Belkin:serviceId:rules1","controlURL":"/upnp/control/rules1","eventSubURL":"/upnp/event/rules1","SCPDURL":"/rulesservice.xml"},{"serviceType":"urn:Belkin:service:metainfo:1","serviceId":"urn:Belkin:serviceId:metainfo1","controlURL":"/upnp/control/metainfo1","eventSubURL":"/upnp/event/metainfo1","SCPDURL":"/metainfoservice.xml"},{"serviceType":"urn:Belkin:service:remoteaccess:1","serviceId":"urn:Belkin:serviceId:remoteaccess1","controlURL":"/upnp/control/remoteaccess1","eventSubURL":"/upnp/event/remoteaccess1","SCPDURL":"/remoteaccess.xml"},{"serviceType":"urn:Belkin:service:deviceinfo:1","serviceId":"urn:Belkin:serviceId:deviceinfo1","controlURL":"/upnp/control/deviceinfo1","eventSubURL":"/upnp/event/deviceinfo1","SCPDURL":"/deviceinfoservice.xml"},{"serviceType":"urn:Belkin:service:insight:1","serviceId":"urn:Belkin:serviceId:insight1","controlURL":"/upnp/control/insight1","eventSubURL":"/upnp/event/insight1","SCPDURL":"/insightservice.xml"},{"serviceType":"urn:Belkin:service:smartsetup:1","serviceId":"urn:Belkin:serviceId:smartsetup1","controlURL":"/upnp/control/smartsetup1","eventSubURL":"/upnp/event/smartsetup1","SCPDURL":"/smartsetup.xml"},{"serviceType":"urn:Belkin:service:manufacture:1","serviceId":"urn:Belkin:serviceId:manufacture1","controlURL":"/upnp/control/manufacture1","eventSubURL":"/upnp/event/manufacture1","SCPDURL":"/manufacture.xml"}]},"presentationURL":"/pluginpres.html","host":"10.0.1.42","port":"49153","callbackURL":"http://10.0.1.32:61185"},
+    "name": "dining room"
+}
+
+ */
+export interface WemoConfigurationInterface extends GenericLightConfigurationInterface{
+    deviceInfo: any;
+    host: string;
+}

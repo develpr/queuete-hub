@@ -10,11 +10,12 @@
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve\"",
     "serve": "nodemon dist/app.js",
-    "watch-ts": "tsc -w"
+    "watch-ts": "tsc -w",
+    "test": "mocha -r ts-node/register src/**/**.spec.ts"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {    
+  "dependencies": {
     "aws-iot-device-sdk": "^2.0.1",
     "belkin-wemo-command-line-tools": "^1.0.28",
     "concurrently": "^3.5.0",
@@ -27,9 +28,14 @@
   },
   "devDependencies": {
     "@types/aws-iot-device-sdk": "^1.0.0",
+    "@types/chai": "^4.0.4",
     "@types/dotenv": "^4.0.1",
+    "@types/mocha": "^2.2.43",
     "@types/node": "^8.0.26",
+    "chai": "^4.1.2",
     "dts-gen": "^0.5.6",
+    "mocha": "^3.5.3",
+    "ts-node": "^3.3.0",
     "typescript": "^2.5.2"
   }
 }
